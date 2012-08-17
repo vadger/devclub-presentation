@@ -221,6 +221,27 @@
           </section>
           <section>
             <h2>Testing</h2>
+            <p>Play! has 3 level of <a target="_blank" href="http://www.playframework.org/documentation/1.2.5/test">testing</a>:</p>
+            <ul>
+              <li>Unit testing <span class="smaller">for isolated testing</span></li>
+              <li>Functional testing <span class="smaller">for whole app testing except UI</span></li>
+              <li>UI testing <span class="smaller">for testing user interaction</span></li>
+            </ul>
+            <div class="fragment">
+              <p>But Play! standard solution didn't suit us</p>
+              <ul>
+                <li>Functional tests don't cover UI</li>
+                <li>Writing Selenium tests is far from ideal</li>
+              </ul>
+            </div>
+            <p class="fragment">For UI tests we made custom runner</p>
+            <div class="fragment">
+              <p>Our approach:</p>
+              <ul>
+                <li>JUnit + Mockito + PowerMockito for Unit tests</li>
+                <li>JUnit + WebDriver + Selenide for UI tests</li>
+              </ul>
+            </div>
           </section>
           <section>
             <h1>It's demo time!</h1>
